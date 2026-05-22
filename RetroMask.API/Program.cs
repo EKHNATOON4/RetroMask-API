@@ -1,0 +1,93 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using RetroMask.API.Authorization;
+using RetroMask.API.Middleware;
+using RetroMask.Application.Abstractions;
+using RetroMask.Application.Mapping;
+using RetroMask.Domain.Entities.Identity;
+using RetroMask.Infrastructure;
+using RetroMask.Infrastructure.Identity;
+using RetroMask.Infrastructure.Persistence;
+using RetroMask.Infrastructure.Realtime;
+using FluentValidation;
+using FluentValidation.AspNetCore;
+using System.Reflection;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// ── Infrastructure (DB, Identity, JWT, SignalR, AI, …) ────────────────────
+builder.Services.AddInfrastructure(builder.Configuration);
+
+// ── Application ──────────────────────────────────────────────────────────
+builder.Services.AddAutoMapper(_ => { }, typeof(MappingProfile).Assembly);
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddValidatorsFromAssembly(Assembly.Load("RetroMask.Application"));
+
+// ── HTTP Context & CurrentUser ────────────────────────────────────────────
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<ICurrentUser, CurrentUser>();
+
+// ── Controllers & Swagger ────────────────────────────────────────────────
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new() { Title = "RetroMask API", Version = "v1" });
+    c.AddSecurityDefinition("Bearer", new()
+    {
+        Name = "Authorization",
+        Type = Microsoft.OpenApi.Models.SecuritySchemeType.ApiKey,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+        Description = "Enter: Bearer {token}"
+    });
+    c.AddSecurityRequirement(new()
+    {
+        {
+            new() { Reference = new() { Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme, Id = "Bearer" } },
+            Array.Empty<string>()
+        }
+    });
+});
+
+// ── CORS ─────────────────────────────────────────────────────────────────
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+        policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+});
+
+var app = builder.Build();
+
+// ── Migrate & Seed ────────────────────────────────────────────────────────
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<RetroMaskDbContext>();
+    await db.Database.MigrateAsync();
+
+    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+    var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
+    await IdentitySeeder.SeedAsync(userManager, roleManager, logger);
+}
+
+// ── Middleware pipeline ───────────────────────────────────────────────────
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseMiddleware<ExceptionHandlingMiddleware>();
+app.UseHttpsRedirection();
+app.UseCors("AllowAll");
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapControllers();
+app.MapHub<SessionHub>("/hubs/session");
+
+app.Run();
+
+public partial class Program;

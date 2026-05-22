@@ -1,0 +1,16 @@
+C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.Application\obj\Debug\net8.0\RetroMask.Application.csproj.AssemblyReference.cache
+C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.Application\obj\Debug\net8.0\RetroMask.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.Application\obj\Debug\net8.0\RetroMask.Application.AssemblyInfoInputs.cache
+C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.Application\obj\Debug\net8.0\RetroMask.Application.AssemblyInfo.cs
+C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.Application\obj\Debug\net8.0\RetroMask.Application.csproj.CoreCompileInputs.cache
+C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.Application\obj\Debug\net8.0\RetroMask.Application.sourcelink.json
+C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.Application\bin\Debug\net8.0\RetroMask.Application.deps.json
+C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.Application\bin\Debug\net8.0\RetroMask.Application.dll
+C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.Application\bin\Debug\net8.0\RetroMask.Application.pdb
+C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.Application\bin\Debug\net8.0\RetroMask.Domain.dll
+C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.Application\bin\Debug\net8.0\RetroMask.Domain.pdb
+C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.Application\obj\Debug\net8.0\RetroMas.B43DE78C.Up2Date
+C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.Application\obj\Debug\net8.0\RetroMask.Application.dll
+C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.Application\obj\Debug\net8.0\refint\RetroMask.Application.dll
+C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.Application\obj\Debug\net8.0\RetroMask.Application.pdb
+C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.Application\obj\Debug\net8.0\ref\RetroMask.Application.dll

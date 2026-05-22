@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="RetroMask.API/RetroMask.API.csproj" />
+  <Project Path="RetroMask.Application/RetroMask.Application.csproj" />
+  <Project Path="RetroMask.Infrastructure/RetroMask.Infrastructure.csproj" />
+  <Project Path="RetroMask.Domain/RetroMask.Domain.csproj" />
+  <Project Path="RetroMask.Tests/RetroMask.Tests.csproj" />
+</Solution>

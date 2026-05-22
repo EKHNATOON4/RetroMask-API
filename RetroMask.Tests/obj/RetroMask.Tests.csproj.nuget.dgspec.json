@@ -1,0 +1,464 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Tests\\RetroMask.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.API\\RetroMask.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.API\\RetroMask.API.csproj",
+        "projectName": "RetroMask.API",
+        "projectPath": "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.API\\RetroMask.API.csproj",
+        "packagesPath": "C:\\Users\\mezoz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\mezoz\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Application\\RetroMask.Application.csproj": {
+                "projectPath": "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Application\\RetroMask.Application.csproj"
+              },
+              "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Infrastructure\\RetroMask.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Infrastructure\\RetroMask.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[16.1.1, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[6.1.1, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Application\\RetroMask.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Application\\RetroMask.Application.csproj",
+        "projectName": "RetroMask.Application",
+        "projectPath": "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Application\\RetroMask.Application.csproj",
+        "packagesPath": "C:\\Users\\mezoz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\mezoz\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Domain\\RetroMask.Domain.csproj": {
+                "projectPath": "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Domain\\RetroMask.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[16.1.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.3.10, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Domain\\RetroMask.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Domain\\RetroMask.Domain.csproj",
+        "projectName": "RetroMask.Domain",
+        "projectPath": "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Domain\\RetroMask.Domain.csproj",
+        "packagesPath": "C:\\Users\\mezoz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\mezoz\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Infrastructure\\RetroMask.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Infrastructure\\RetroMask.Infrastructure.csproj",
+        "projectName": "RetroMask.Infrastructure",
+        "projectPath": "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Infrastructure\\RetroMask.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\mezoz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\mezoz\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Application\\RetroMask.Application.csproj": {
+                "projectPath": "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Application\\RetroMask.Application.csproj"
+              },
+              "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Domain\\RetroMask.Domain.csproj": {
+                "projectPath": "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Domain\\RetroMask.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[8.18.0, )"
+            },
+            "OpenAI": {
+              "target": "Package",
+              "version": "[2.10.0, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[8.6.6, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.18.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Tests\\RetroMask.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Tests\\RetroMask.Tests.csproj",
+        "projectName": "RetroMask.Tests",
+        "projectPath": "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Tests\\RetroMask.Tests.csproj",
+        "packagesPath": "C:\\Users\\mezoz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\mezoz\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.API\\RetroMask.API.csproj": {
+                "projectPath": "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.API\\RetroMask.API.csproj"
+              },
+              "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Application\\RetroMask.Application.csproj": {
+                "projectPath": "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Application\\RetroMask.Application.csproj"
+              },
+              "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Domain\\RetroMask.Domain.csproj": {
+                "projectPath": "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Domain\\RetroMask.Domain.csproj"
+              },
+              "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Infrastructure\\RetroMask.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Infrastructure\\RetroMask.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[8.10.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Testing": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.9.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.9.3, )"
+            },
+            "xunit.runner.visualstudio": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.5.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
