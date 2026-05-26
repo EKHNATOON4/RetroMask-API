@@ -1,6 +1,6 @@
 namespace RetroMask.Domain.Enums;
 
-public enum DiscussionPointType
+public enum   DiscussionPointType
 {
     WentWell = 0,
     ToImprove = 1,

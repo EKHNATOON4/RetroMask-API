@@ -41,7 +41,9 @@ public class MappingProfile : Profile
             .ForMember(d => d.DisplayName, o => o.MapFrom(s => s.User.DisplayName ?? s.User.Email))
             .ForMember(d => d.Email, o => o.MapFrom(s => s.User.Email))
             .ForMember(d => d.AvatarUrl, o => o.MapFrom(s => s.User.AvatarUrl));
-        CreateMap<TeamInvitation, TeamInvitationDto>().IgnoreAllPropertiesWithAnInaccessibleSetter();
+        CreateMap<TeamInvitation, TeamInvitationDto>()
+            .ForMember(d => d.TeamName, o => o.MapFrom(s => s.Team.Name))
+            .ForMember(d => d.InvitedByName, o => o.MapFrom(s => s.InvitedBy.DisplayName ?? s.InvitedBy.Email));
 
         // Sessions
         CreateMap<Session, SessionDto>()
@@ -109,17 +111,3 @@ public class MappingProfile : Profile
 }
 }
 
-// Placeholder for TeamInvitationDto referenced above
-namespace RetroMask.Application.Dtos.Teams
-{
-    public class TeamInvitationDto
-    {
-        public Guid Id { get; set; }
-        public Guid TeamId { get; set; }
-        public string TeamName { get; set; } = string.Empty;
-        public string InvitedEmail { get; set; } = string.Empty;
-        public Domain.Enums.InvitationStatus Status { get; set; }
-        public DateTime ExpiresAt { get; set; }
-        public DateTime CreatedAt { get; set; }
-    }
-}

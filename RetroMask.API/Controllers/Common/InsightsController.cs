@@ -16,7 +16,7 @@ public class InsightsController : ControllerBase
         _service = service;
     }
 
-    [HttpGet("me")]
+        [HttpGet("me")]
     public async Task<IActionResult> GetMyInsights(CancellationToken ct)
         => Ok(await _service.GetMyInsightsAsync(ct));
 

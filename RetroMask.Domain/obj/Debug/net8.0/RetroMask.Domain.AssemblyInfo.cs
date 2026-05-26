@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RetroMask.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9635ea8e13ea7a396d1d0eccfffd6665079920f")]
 [assembly: System.Reflection.AssemblyProductAttribute("RetroMask.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RetroMask.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

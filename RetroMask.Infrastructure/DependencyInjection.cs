@@ -7,6 +7,8 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using RetroMask.Application.Abstractions;
 using RetroMask.Application.Abstractions.Repositories;
+using RetroMask.Application.Services.Auth;
+using RetroMask.Application.Services.Teams;
 using RetroMask.Domain.Entities.Identity;
 using RetroMask.Infrastructure.AI;
 using RetroMask.Infrastructure.Auth;
@@ -15,6 +17,8 @@ using RetroMask.Infrastructure.Files;
 using RetroMask.Infrastructure.Persistence;
 using RetroMask.Infrastructure.Persistence.Repositories;
 using RetroMask.Infrastructure.Realtime;
+using RetroMask.Infrastructure.Services.Auth;
+using RetroMask.Infrastructure.Services.Teams;
 
 namespace RetroMask.Infrastructure;
 
@@ -85,6 +89,8 @@ public static class DependencyInjection
         services.AddScoped<IJwtTokenService, JwtTokenService>();
         services.AddScoped<IFileStorageService, LocalFileStorageService>();
         services.AddScoped<ISessionBroadcaster, SessionBroadcaster>();
+        services.AddScoped<IAuthService, AuthService>();
+        services.AddScoped<ITeamService, TeamService>();
 
         // ── Email ─────────────────────────────────────────────────────────────
         var useSmtp = configuration.GetValue<bool>("Email:UseSmtp");

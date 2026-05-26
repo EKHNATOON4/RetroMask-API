@@ -421,11 +421,11 @@
           "lib/net6.0/FluentAssertions.dll": {}
         }
       },
-      "FluentValidation/12.1.1": {
+      "FluentValidation/11.9.2": {
         "runtime": {
           "lib/net8.0/FluentValidation.dll": {
-            "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.1.1.0"
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.9.2.0"
           }
         },
         "compile": {
@@ -434,8 +434,8 @@
       },
       "FluentValidation.AspNetCore/11.3.0": {
         "dependencies": {
-          "FluentValidation": "12.1.1",
-          "FluentValidation.DependencyInjectionExtensions": "12.1.1"
+          "FluentValidation": "11.9.2",
+          "FluentValidation.DependencyInjectionExtensions": "11.9.2"
         },
         "runtime": {
           "lib/net6.0/FluentValidation.AspNetCore.dll": {
@@ -447,19 +447,19 @@
           "lib/net6.0/FluentValidation.AspNetCore.dll": {}
         }
       },
-      "FluentValidation.DependencyInjectionExtensions/12.1.1": {
+      "FluentValidation.DependencyInjectionExtensions/11.9.2": {
         "dependencies": {
-          "FluentValidation": "12.1.1",
+          "FluentValidation": "11.9.2",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.3"
         },
         "runtime": {
-          "lib/net8.0/FluentValidation.DependencyInjectionExtensions.dll": {
-            "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.1.1.0"
+          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.9.2.0"
           }
         },
         "compile": {
-          "lib/net8.0/FluentValidation.DependencyInjectionExtensions.dll": {}
+          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {}
         }
       },
       "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.0": {
@@ -1857,8 +1857,8 @@
       "RetroMask.Application/1.0.0": {
         "dependencies": {
           "AutoMapper": "16.1.1",
-          "FluentValidation": "12.1.1",
-          "FluentValidation.DependencyInjectionExtensions": "12.1.1",
+          "FluentValidation": "11.9.2",
+          "FluentValidation.DependencyInjectionExtensions": "11.9.2",
           "Microsoft.AspNetCore.Http.Abstractions": "2.3.10",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.3",
           "RetroMask.Domain": "1.0.0"
@@ -3919,12 +3919,12 @@
       "path": "fluentassertions/8.10.0",
       "hashPath": "fluentassertions.8.10.0.nupkg.sha512"
     },
-    "FluentValidation/12.1.1": {
+    "FluentValidation/11.9.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-EPpkIe1yh1a0OXyC100oOA8WMbZvqUu5plwhvYcb7oSELfyUZzfxV48BLhvs3kKo4NwG7MGLNgy1RJiYtT8Dpw==",
-      "path": "fluentvalidation/12.1.1",
-      "hashPath": "fluentvalidation.12.1.1.nupkg.sha512"
+      "sha512": "sha512-XeHp9LvFvu1fsQ/NvDCymV02GOCB1nz7ZUhfpI3uMhCcHTkV1K5bMkv+Nc/kuNYyAsX5+5bcmUanIEMd5QN+Eg==",
+      "path": "fluentvalidation/11.9.2",
+      "hashPath": "fluentvalidation.11.9.2.nupkg.sha512"
     },
     "FluentValidation.AspNetCore/11.3.0": {
       "type": "package",
@@ -3933,12 +3933,12 @@
       "path": "fluentvalidation.aspnetcore/11.3.0",
       "hashPath": "fluentvalidation.aspnetcore.11.3.0.nupkg.sha512"
     },
-    "FluentValidation.DependencyInjectionExtensions/12.1.1": {
+    "FluentValidation.DependencyInjectionExtensions/11.9.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-D0VXh4dtjjX2aQizuaa0g6R8X3U1JaVqJPfGCvLwZX9t/O2h7tkpbitbadQMfwcgSPdDbI2vDxuwRMv/Uf9dHA==",
-      "path": "fluentvalidation.dependencyinjectionextensions/12.1.1",
-      "hashPath": "fluentvalidation.dependencyinjectionextensions.12.1.1.nupkg.sha512"
+      "sha512": "sha512-PMAdnR1fX1c8DyUvu5YvRa0V0JHES8vzXnVX0OSS3z9W/SkuHqcGrtiSOdW1QehG3vZhXsKhqf3wgDzW/OYahA==",
+      "path": "fluentvalidation.dependencyinjectionextensions/11.9.2",
+      "hashPath": "fluentvalidation.dependencyinjectionextensions.11.9.2.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.0": {
       "type": "package",

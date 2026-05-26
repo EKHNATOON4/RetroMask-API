@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "7bW8GBsCavE=",
+  "dgSpecHash": "jR8dQlgIJVY=",
   "success": true,
   "projectFilePath": "C:\\Users\\mezoz\\Downloads\\Graduation Project\\project_3\\RetroMask\\RetroMask.Application\\RetroMask.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mezoz\\.nuget\\packages\\automapper\\16.1.1\\automapper.16.1.1.nupkg.sha512",
-    "C:\\Users\\mezoz\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
-    "C:\\Users\\mezoz\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.1.1\\fluentvalidation.dependencyinjectionextensions.12.1.1.nupkg.sha512",
+    "C:\\Users\\mezoz\\.nuget\\packages\\fluentvalidation\\11.9.2\\fluentvalidation.11.9.2.nupkg.sha512",
+    "C:\\Users\\mezoz\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.2\\fluentvalidation.dependencyinjectionextensions.11.9.2.nupkg.sha512",
     "C:\\Users\\mezoz\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.0\\microsoft.aspnetcore.cryptography.internal.8.0.0.nupkg.sha512",
     "C:\\Users\\mezoz\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.0\\microsoft.aspnetcore.cryptography.keyderivation.8.0.0.nupkg.sha512",
     "C:\\Users\\mezoz\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.3.10\\microsoft.aspnetcore.http.abstractions.2.3.10.nupkg.sha512",
