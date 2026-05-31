@@ -33,3 +33,10 @@ public class SubmitAnswerRequest
 {
     public string Answer { get; set; } = string.Empty;
 }
+
+public class AvailableGameDto
+{
+    public string GameType { get; set; } = string.Empty;
+    public string Title { get; set; } = string.Empty;
+    public string Description { get; set; } = string.Empty;
+}

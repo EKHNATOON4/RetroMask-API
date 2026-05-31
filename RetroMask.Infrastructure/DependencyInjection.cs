@@ -7,8 +7,19 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using RetroMask.Application.Abstractions;
 using RetroMask.Application.Abstractions.Repositories;
+using RetroMask.Application.Services.ActionItems;
+using RetroMask.Application.Services.AI;
 using RetroMask.Application.Services.Auth;
+using RetroMask.Application.Services.Feedback;
+using RetroMask.Application.Services.Game;
+using RetroMask.Application.Services.Insights;
+using RetroMask.Application.Services.Notifications;
+using RetroMask.Application.Services.Phases;
+using RetroMask.Application.Services.Points;
+using RetroMask.Application.Services.Reports;
+using RetroMask.Application.Services.Sessions;
 using RetroMask.Application.Services.Teams;
+using RetroMask.Application.Services.Voting;
 using RetroMask.Domain.Entities.Identity;
 using RetroMask.Infrastructure.AI;
 using RetroMask.Infrastructure.Auth;
@@ -17,8 +28,19 @@ using RetroMask.Infrastructure.Files;
 using RetroMask.Infrastructure.Persistence;
 using RetroMask.Infrastructure.Persistence.Repositories;
 using RetroMask.Infrastructure.Realtime;
+using RetroMask.Infrastructure.Services.ActionItems;
+using RetroMask.Infrastructure.Services.AI;
 using RetroMask.Infrastructure.Services.Auth;
+using RetroMask.Infrastructure.Services.Feedback;
+using RetroMask.Infrastructure.Services.Game;
+using RetroMask.Infrastructure.Services.Insights;
+using RetroMask.Infrastructure.Services.Notifications;
+using RetroMask.Infrastructure.Services.Phases;
+using RetroMask.Infrastructure.Services.Points;
+using RetroMask.Infrastructure.Services.Reports;
+using RetroMask.Infrastructure.Services.Sessions;
 using RetroMask.Infrastructure.Services.Teams;
+using RetroMask.Infrastructure.Services.Voting;
 
 namespace RetroMask.Infrastructure;
 
@@ -91,6 +113,17 @@ public static class DependencyInjection
         services.AddScoped<ISessionBroadcaster, SessionBroadcaster>();
         services.AddScoped<IAuthService, AuthService>();
         services.AddScoped<ITeamService, TeamService>();
+        services.AddScoped<ISessionService, SessionService>();
+        services.AddScoped<IPhaseService, PhaseService>();
+        services.AddScoped<IPointService, PointService>();
+        services.AddScoped<IVotingService, VotingService>();
+        services.AddScoped<INotificationService, NotificationService>();
+        services.AddScoped<IFeedbackService, FeedbackService>();
+        services.AddScoped<IActionItemService, ActionItemService>();
+        services.AddScoped<IGameService, GameService>();
+        services.AddScoped<IAIService, AIService>();
+        services.AddScoped<IReportService, ReportService>();
+        services.AddScoped<IInsightService, InsightService>();
 
         // ── Email ─────────────────────────────────────────────────────────────
         var useSmtp = configuration.GetValue<bool>("Email:UseSmtp");

@@ -9,4 +9,5 @@ public interface IInsightService
     Task<ApiResponse<IEnumerable<GrowthSnapshotDto>>> GetGrowthSnapshotsAsync(int months, CancellationToken ct = default);
     Task<ApiResponse<UserInsightDto>> GetUserInsightsAsync(string userId, CancellationToken ct = default);
     Task RefreshInsightsAsync(string userId, CancellationToken ct = default);
+    Task<ApiResponse<UserInsightDto>> RefreshMyInsightsAsync(CancellationToken ct = default);
 }

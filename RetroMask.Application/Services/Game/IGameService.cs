@@ -10,5 +10,5 @@ public interface IGameService
     Task<ApiResponse> SubmitAnswerAsync(Guid gameId, SubmitAnswerRequest request, CancellationToken ct = default);
     Task<ApiResponse<GameDto>> CompleteGameAsync(Guid gameId, CancellationToken ct = default);
     Task<ApiResponse<IEnumerable<GameResultDto>>> GetLeaderboardAsync(Guid gameId, CancellationToken ct = default);
-    Task<ApiResponse<IEnumerable<string>>> GetAvailableGamesAsync(CancellationToken ct = default);
+    Task<ApiResponse<IEnumerable<AvailableGameDto>>> GetAvailableGamesAsync(CancellationToken ct = default);
 }

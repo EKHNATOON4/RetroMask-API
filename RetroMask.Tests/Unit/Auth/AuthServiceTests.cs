@@ -1,51 +1,56 @@
 using FluentAssertions;
-using Moq;
-using RetroMask.Application.Abstractions;
-using RetroMask.Application.Abstractions.Repositories;
-using RetroMask.Application.Dtos.Auth;
-using RetroMask.Application.Services.Auth;
+using Microsoft.AspNetCore.Mvc.Testing;
+using System.Net.Http.Json;
+using System.Text.Json;
+using RetroMask.Tests.Integration;
 using Xunit;
 
 namespace RetroMask.Tests.Unit.Auth;
 
-public class AuthServiceTests
+/// <summary>
+/// Auth service tests running via WebApplicationFactory (Identity requires the full host pipeline).
+/// </summary>
+public class AuthServiceTests : IClassFixture<RetroMaskWebAppFactory>
 {
-    private readonly Mock<IUnitOfWork> _uowMock = new();
-    private readonly Mock<IJwtTokenService> _jwtMock = new();
-    private readonly Mock<IEmailService> _emailMock = new();
+    private readonly HttpClient _client;
 
-    // TODO: Inject real IAuthService implementation once created in Application layer
-    // private readonly IAuthService _sut;
-
-    [Fact(Skip = "Pending implementation")]
-    public async Task Register_WithValidRequest_ShouldReturnAuthResponse()
+    public AuthServiceTests(RetroMaskWebAppFactory factory)
     {
-        // Arrange
-        var request = new RegisterRequest
-        {
-            FirstName = "Test",
-            LastName = "User",
-            Email = "test@example.com",
-            Password = "Test@1234",
-            ConfirmPassword = "Test@1234"
-        };
-
-        // Act
-        // var result = await _sut.RegisterAsync(request);
-
-        // Assert
-        // result.Success.Should().BeTrue();
-        // result.Data.Should().NotBeNull();
-        await Task.CompletedTask;
+        _client = factory.CreateClient();
     }
 
-    [Fact(Skip = "Pending implementation")]
+    [Fact]
+    public async Task Register_WithValidRequest_ShouldReturnAuthResponse()
+    {
+        var request = new
+        {
+            firstName = "Test",
+            lastName = "User",
+            email = $"auth_reg_{Guid.NewGuid():N}@test.com",
+            password = "Test@1234",
+            confirmPassword = "Test@1234"
+        };
+
+        var response = await _client.PostAsJsonAsync("/api/auth/register", request);
+        var json = await response.Content.ReadAsStringAsync();
+
+        ((int)response.StatusCode).Should().BeInRange(200, 299, because: json);
+
+        using var doc = JsonDocument.Parse(json);
+        var root = doc.RootElement;
+        root.GetProperty("success").GetBoolean().Should().BeTrue();
+        root.GetProperty("data").GetProperty("accessToken").GetString().Should().NotBeNullOrEmpty();
+        root.GetProperty("data").GetProperty("refreshToken").GetString().Should().NotBeNullOrEmpty();
+    }
+
+    [Fact]
     public async Task Login_WithInvalidCredentials_ShouldFail()
     {
-        // Arrange
-        var request = new LoginRequest { Email = "wrong@example.com", Password = "WrongPass" };
+        var loginBody = new { email = "nonexistent@example.com", password = "WrongPass123!" };
+        var response = await _client.PostAsJsonAsync("/api/auth/login", loginBody);
+        var json = await response.Content.ReadAsStringAsync();
 
-        // Act & Assert
-        await Task.CompletedTask;
+        using var doc = JsonDocument.Parse(json);
+        doc.RootElement.GetProperty("success").GetBoolean().Should().BeFalse();
     }
 }

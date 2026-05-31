@@ -33,7 +33,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new() { Title = "RetroMask API", Version = "v1" });
+    c.SwaggerDoc("v1", new()
+    {
+        Title = "RetroMask API",
+        Version = "v1",
+        Description = "REST API for RetroMask - a collaborative retrospective platform with real-time voting, " +
+                      "icebreaker games, anonymous feedback, AI-driven insights, and personal growth tracking."
+    });
     c.AddSecurityDefinition("Bearer", new()
     {
         Name = "Authorization",
@@ -50,6 +56,11 @@ builder.Services.AddSwaggerGen(c =>
             Array.Empty<string>()
         }
     });
+
+    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    if (File.Exists(xmlPath))
+        c.IncludeXmlComments(xmlPath);
 });
 
 // ── CORS ─────────────────────────────────────────────────────────────────
@@ -65,7 +76,10 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<RetroMaskDbContext>();
-    await db.Database.MigrateAsync();
+    if (db.Database.IsRelational())
+        await db.Database.MigrateAsync();
+    else
+        await db.Database.EnsureCreatedAsync();
 
     var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
     var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();

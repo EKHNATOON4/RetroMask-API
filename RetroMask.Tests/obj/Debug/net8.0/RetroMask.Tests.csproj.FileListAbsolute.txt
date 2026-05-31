@@ -485,3 +485,4 @@ C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.Tests\
 C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.Tests\obj\Debug\net8.0\RetroMask.Tests.pdb
 C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.Tests\obj\Debug\net8.0\RetroMask.Tests.genruntimeconfig.cache
 C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.Tests\obj\Debug\net8.0\ref\RetroMask.Tests.dll
+C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.Tests\bin\Debug\net8.0\RetroMask.API.xml

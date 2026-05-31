@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RetroMask.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9635ea8e13ea7a396d1d0eccfffd6665079920f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3726c92f356636b5fcc54e269ab9ffd90a13d75e")]
 [assembly: System.Reflection.AssemblyProductAttribute("RetroMask.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RetroMask.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

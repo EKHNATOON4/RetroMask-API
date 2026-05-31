@@ -117,3 +117,5 @@ C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.API\ob
 C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.API\obj\Debug\net8.0\RetroMask.API.pdb
 C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.API\obj\Debug\net8.0\RetroMask.API.genruntimeconfig.cache
 C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.API\obj\Debug\net8.0\ref\RetroMask.API.dll
+C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.API\bin\Debug\net8.0\RetroMask.API.xml
+C:\Users\mezoz\Downloads\Graduation Project\project_3\RetroMask\RetroMask.API\obj\Debug\net8.0\RetroMask.API.xml

@@ -27,3 +27,8 @@ public class PhaseOrderItem
     public Guid PhaseId { get; set; }
     public int Order { get; set; }
 }
+
+public class ExtendPhaseRequest
+{
+    public int AdditionalMinutes { get; set; } = 5;
+}
